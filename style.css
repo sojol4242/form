@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
 body,
 input {
     font-family: 'Lato', sans-serif;
-    background-color: #5e92ec;
+    background-color: #5eec99;
 }
 
 .container {
@@ -16,7 +17,7 @@ input {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
 }
 
 .container::before {
@@ -25,7 +26,7 @@ input {
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(60deg, #699ffb, #049afe);
+    background: linear-gradient(60deg, #69fb70, #04fe75);
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
@@ -121,19 +122,20 @@ form.sing-up-form {
     outline: none;
     border-radius: 50px;
     cursor: pointer;
-    background: linear-gradient(-60deg, #005dfd, #5995fd);
-    color: #fff;
+    background: linear-gradient(60deg, #97ff9c, #59fd67);
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     font-weight: 600;
     margin: 10px 0;
-    transition: color .3s;
+    transition: background .3s linear;
 }
 
 .btn:hover {
     transform: scale(.99);
-    background: rgb(222, 237, 246);
-    color: #01122e;
-    border: 2px solid #9bbfff;
+    background: rgba(166, 241, 166, 0.767);
+    color: #000000;
+    border: 2px solid #f1f1f1;
+    font-weight: 700;
 }
 
 .social-text {
@@ -163,8 +165,8 @@ form.sing-up-form {
 }
 
 .social-icon:hover {
-    color: #4d84e2;
-    border: 1px solid #4d84e2;
+    color: #4de2bd;
+    border: 1px solid #4de2b5;
 }
 
 .panel-container {
@@ -198,7 +200,7 @@ form.sing-up-form {
 }
 
 .panel .content {
-    color: #fff;
+    color: rgb(0, 0, 0);
     transition: .9s .6s ease-in-out;
 }
 
@@ -214,14 +216,14 @@ form.sing-up-form {
 }
 
 .panel p {
-    font-size: .95rem;
-    padding: .7rem 0;
+    font-size: 1.2rem;
+    padding: 2rem 0;
 }
 
 .btn.transparent {
     margin: 0;
     background: none;
-    border: 2px solid #fff;
+    border: 2px solid rgb(165, 252, 223);
     width: 130px;
     height: 41px;
     font-weight: 600;
@@ -278,12 +280,14 @@ form.sing-up-form {
         min-height: 800px;
         height: 100vh;
     }
+
     .signin-signup {
         width: 100%;
         top: 95%;
         transform: translate(-50%, -100%);
         transition: 1s 0.8s ease-in-out;
     }
+
     .container:before {
         width: 1500px;
         height: 1500px;
@@ -294,19 +298,23 @@ form.sing-up-form {
         top: initial;
         transition: 2s ease-in-out;
     }
+
     .container.sign-up-mode:before {
         transform: translate(-50%, 100%);
         bottom: 32%;
         right: initial;
     }
+
     .signin-signup,
     .container.sign-up-mode .signin-signup {
         left: 50%;
     }
+
     .panel-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr 1fr;
     }
+
     .panel {
         flex-direction: row;
         justify-content: space-around;
@@ -314,69 +322,94 @@ form.sing-up-form {
         padding: 2.5rem 8%;
         grid-column: 1 / 2;
     }
+
     .right-panel {
         grid-row: 3 / 4;
     }
+
     .left-panel {
         grid-row: 1 / 2;
     }
+
     .image {
         width: 200px;
         transition: transform 0.9s ease-in-out;
         transition-delay: 0.6s;
     }
+
     .panel .content {
         padding-right: 15%;
         transition: transform 0.9s ease-in-out;
         transition-delay: 0.8s;
     }
+
     .panel h3 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
+
     .panel p {
-        font-size: 0.7rem;
-        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        padding: 1rem 0;
     }
+
     .btn.transparent {
         width: 110px;
         height: 35px;
         font-size: 0.7rem;
     }
+
     .container.sign-up-mode .left-panel .image,
     .container.sign-up-mode .left-panel .content {
         transform: translateY(-300px);
     }
+
     .container.sign-up-mode .right-panel .image,
     .container.sign-up-mode .right-panel .content {
         transform: translateY(0px);
     }
+
     .right-panel .image,
     .right-panel .content {
         transform: translateY(300px);
     }
+
     .container.sign-up-mode .signin-signup {
         top: 5%;
         transform: translate(-50%, 0);
     }
+
+    .btn.transparent:hover {
+        transform: scale(.99);
+        background: transparent;
+        color: rgb(10, 10, 10);
+        border: 2px solid #ffffff;
+        font-weight: 700;
+    }
+
 }
 
 @media (max-width: 570px) {
     form {
         padding: 0 1.5rem;
     }
+
     .image {
         display: none;
     }
+
     .panel .content {
         padding: 0.5rem 1rem;
     }
+
     .container {
         padding: 1.5rem;
     }
+
     .container:before {
         bottom: 72%;
         left: 50%;
     }
+
     .container.sign-up-mode:before {
         bottom: 28%;
         left: 50%;
